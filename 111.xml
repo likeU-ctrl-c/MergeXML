@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+          android:compileSdkVersion="30" android:compileSdkVersionCodename="11" package="com.beemdevelopment.aegis" platformBuildVersionCode="30" platformBuildVersionName="11">
+    <uses-permission android:name="android.permission.CAMERA"/>
+    <uses-permission android:name="android.permission.USE_BIOMETRIC"/>
+	<uses-permission android:name="aasfdsdfsdfasdfasfasdf"/>
+    <uses-feature android:name="android.hardware.camera" android:required="false"/>
+    <uses-feature android:name="android.hardware.camera.autofocus" android:required="false"/>
+    <queries>
+        <package android:name="com.authy.authy"/>
+        <package android:name="org.fedorahosted.freeotp"/>
+        <package android:name="org.liberty.android.freeotpplus"/>
+        <package android:name="com.google.android.apps.authenticator2"/>
+        <package android:name="com.azure.authenticator"/>
+        <package android:name="com.valvesoftware.android.steam.community"/>
+        <package android:name="com.authenticator.authservice2"/>
+    </queries>
+    <uses-permission android:name="android.permission.USE_FINGERPRINT"/>
+    <application android:allowBackup="true" android:appComponentFactory="androidx.core.app.CoreComponentFactory" android:backupAgent="com.beemdevelopment.aegis.AegisBackupAgent" android:fullBackupContent="@xml/backup_rules" android:fullBackupOnly="true" android:icon="@mipmap/ic_launcher" android:label="Aegis" android:name="com.beemdevelopment.aegis.AegisApplication" android:supportsRtl="true" android:theme="@style/Theme.Aegis.Launch">
+        <activity android:label="@string/title_activity_transfer" android:name="com.beemdevelopment.aegis.ui.TransferEntriesActivity"/>
+        <activity android:label="@string/title_activity_about" android:name="com.beemdevelopment.aegis.ui.AboutActivity"/>
+        <activity android:label="@string/title_activity_import_entries" android:name="com.beemdevelopment.aegis.ui.ImportEntriesActivity"/>
+        <activity android:label="Aegis" android:name="com.beemdevelopment.aegis.ui.MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <data android:scheme="otpauth"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.SEND"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <data android:mimeType="image/*"/>
+            </intent-filter>
+        </activity>
+        <activity android:configChanges="keyboardHidden|orientation|screenSize" android:label="@string/title_activity_scan_qr" android:name="com.beemdevelopment.aegis.ui.ScannerActivity" android:screenOrientation="portrait"/>
+        <activity android:label="@string/title_activity_edit_entry" android:name="com.beemdevelopment.aegis.ui.EditEntryActivity"/>
+        <activity android:name="com.beemdevelopment.aegis.ui.IntroActivity" android:screenOrientation="portrait"/>
+        <activity android:name="com.beemdevelopment.aegis.ui.AuthActivity"/>
+        <activity android:label="@string/title_activity_preferences" android:name="com.beemdevelopment.aegis.ui.PreferencesActivity"/>
+        <activity android:label="@string/title_activity_manage_slots" android:name="com.beemdevelopment.aegis.ui.SlotManagerActivity"/>
+        <activity android:label="@string/title_activity_manage_groups" android:name="com.beemdevelopment.aegis.ui.GroupManagerActivity"/>
+        <activity android:launchMode="singleInstance" android:name="com.beemdevelopment.aegis.ui.PanicResponderActivity" android:noHistory="true" android:theme="@android:style/Theme.NoDisplay">
+            <intent-filter>
+                <action android:name="info.guardianproject.panic.action.TRIGGER"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+        <activity android:name="com.beemdevelopment.aegis.ui.ExitActivity"/>
+        <service android:name="com.beemdevelopment.aegis.services.NotificationService"/>
+        <provider android:authorities="com.beemdevelopment.aegis.fileprovider" android:exported="false" android:grantUriPermissions="true" android:name="androidx.core.content.FileProvider">
+            <meta-data android:name="android.support.FILE_PROVIDER_PATHS" android:resource="@xml/file_paths"/>
+        </provider>
+        <meta-data android:name="android.webkit.WebView.MetricsOptOut" android:value="true"/>
+        <provider android:authorities="com.beemdevelopment.aegis.lifecycle-process" android:exported="false" android:multiprocess="true" android:name="androidx.lifecycle.ProcessLifecycleOwnerInitializer"/>
+    </application>
+</manifest>
